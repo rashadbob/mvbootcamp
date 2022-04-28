@@ -1,6 +1,8 @@
+const { assertImport } = require("@babel/types");
+
 class Bag { //declare a class name "bag"
 
-
+    limit=20
     constructor(weight){ // invokes a attribute
         if (!weight){//weight less than 0 
             throw new Error ('bag must have a wieght');
@@ -8,20 +10,29 @@ class Bag { //declare a class name "bag"
 
         }  
             
-        this.weight = weight// why has she done this, maybe as she has called constructor she now need to give this a value
+        this.weight = weight//   has called constructor , now need to give this a value
 
+      
 
     }
+        isOverLimit(){
 
+            if (this.weight>this.limit){
+
+                return "bag is too heavy"
+            }
+            return "bag is ok"
+        }
 
 }
 
 class Passenger{//new object passenger
       
     Bags=[]//declare array of bags to store object
+           //Bags is declared within another class it is a 1-M relationship declared in the 1
     constructor(PassengerName,PassportNo,PlaneSeatNo){//attributes of a passenger
    
-    this.PassengerName=PassengerName
+    this.PassengerName=PassengerName//has called for these values within the constructor and now needs to provide the values (done outside the class)
     this.PassportNo=PassportNo
     this.PlaneSeatNo=PlaneSeatNo
 
@@ -39,6 +50,9 @@ class Passenger{//new object passenger
     const bobsHullBag = new Bag(23)
     bob.addBag(bobsCabinBag)//calls function addBag
     bob.addBag(bobsHullBag)
+    
+    
+   module.exports= Bag
 
 //window.alert(9)
 try {

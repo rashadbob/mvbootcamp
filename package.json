@@ -1,0 +1,23 @@
+{
+  "name": "multiverse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Airport.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rashadbob/mvbootcamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rashadbob/mvbootcamp/issues"
+  },
+  "homepage": "https://github.com/rashadbob/mvbootcamp#readme",
+  "dependencies": {
+    "jest": "^28.0.2"
+  },
+  "scripts": { "test": "jest", "test:report": "jest --coverage=true" }
+}
