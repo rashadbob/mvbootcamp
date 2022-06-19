@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/rashadbob/mvbootcamp#readme",
   "dependencies": {
+    "axios": "^0.27.2",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.0",
     "jest": "^28.0.2",
     "sqlite3": "^5.0.8"
   }

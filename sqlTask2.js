@@ -35,7 +35,7 @@ const selectSql4 = "SELECT ResturantClass.NAME,Menu.TITLE FROM ResturantClass JO
 const selectSql5 = "SELECT Menu.TITLE,MenuItem.PRICE FROM Menu JOIN MenuItem ON Menu.ID WHERE Menu.ID=1"
 
 
-const selectSql6 = "SELECT COUNT(Menu.ID),ResturantClass.NAME FROM MENU JOIN ResturantClass ON ResturantClass.ID = Menu.restaurant_id WHERE ResturantClass.ID =2 GROUP BY  ResturantClass.NAME "
+const selectSql6 = "SELECT COUNT(*),ResturantClass.ID FROM MENU JOIN ResturantClass ON ResturantClass.ID = Menu.restaurant_id  GROUP BY  ResturantClass.NAME "
 
 const selectSql7 = "SELECT  MenuItem.PRICE, SUM(PRICE)FROM MenuItem "
 const selectSql8 = "SELECT ResturantClass.Name  From ResturantClass"
@@ -102,7 +102,7 @@ const selectSql8 = "SELECT ResturantClass.Name  From ResturantClass"
 //     }
 // })
 
-db.all(selectSql6, (err, rows) => {
+db.all(selectSql, (err, rows) => {
     if (err) {
         return console.error(err.message);
     }

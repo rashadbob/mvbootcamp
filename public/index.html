@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <link rel="stylesheet" href="/style.css"/>
+    <!-- links html to css -->
+    <link rel="shortcut icon" type="image/png" href="image/tue.png"> 
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!-- This fixes our Axios Problem. We are importing from browser rather than Node -->
+    <script src="script.js"></script> 
+    <!-- links html to js file -->
+
+</head>
+
+<body>
+    <div id = "div"> </div>
+    <form id="create-restaurant" onsubmit="processForm(this);return false;">
+         <div>
+         <label for="restaurant-name">Name of restaurant</label>
+         <input id="rname" name="NAME" required/>
+         </div>
+         <div>
+         <label for="restaurant-url">Upload a url</label>
+        <input id="rurl" name="IMAGELINK" required/>
+        </div>
+         <div>
+         <button>Create</button>
+        </div>
+        </form>
+        
+    <h1>Hello World</h1>
+</body>
+
+</html>
